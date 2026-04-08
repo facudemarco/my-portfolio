@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facundo Demarco — Backend & AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="nav-logo">FD</span>
+    <ul class="nav-links">
+      <li><a href="#hero"      data-i18n="nav_home">Inicio</a></li>
+      <li><a href="#projects"  data-i18n="nav_projects">Proyectos</a></li>
+      <li><a href="#stack"     data-i18n="nav_stack">Stack</a></li>
+      <li><a href="#certs"     data-i18n="nav_certs">Cursos</a></li>
+      <li><a href="#contact"   data-i18n="nav_contact">Contacto</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="ctrl-btn" id="lang-toggle"><span data-i18n="lang_label">EN</span></button>
+      <button class="ctrl-btn icon-only" id="theme-toggle" aria-label="Toggle theme">
+        <span class="icon-sun">☀</span>
+        <span class="icon-moon">☽</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="glow-orb"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-greeting" data-i18n="hero_greeting">Hola, soy</p>
+        <h1>Facundo <span class="name-accent">Demarco</span></h1>
+        <p class="hero-role">
+          <span data-i18n="hero_role_prefix">Soy: </span><span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+        </p>
+        <p class="bio" data-i18n="bio">
+          Construyo sistemas backend en producción: APIs, servicios en tiempo real, integraciones con LLMs y pipelines de automatización. Trabajo con problemas reales, no con tutoriales.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary" data-i18n="btn_projects">Ver proyectos</a>
+          <a href="https://github.com/facudemarco" target="_blank" class="btn-outline">GitHub</a>
+          <a href="https://www.linkedin.com/in/facundodemarco/" target="_blank" class="btn-outline">LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="avatar-ring">
+          <img src="yo3-1.jpeg" alt="Facundo Demarco" class="avatar" />
+        </div>
+        <div class="avatar-label">FD</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-intro">
+      <h2 data-i18n="projects_title">Proyectos</h2>
+      <p data-i18n="projects_sub">Sistemas reales, en producción</p>
+    </div>
+    <div class="projects-grid">
+
+      <div class="card accent-card">
+        <div class="card-body">
+          <div class="card-title-row">
+            <span class="card-emoji">🍔</span>
+            <h3>Burgerli</h3>
+            <a href="https://burgerli.com.ar" target="_blank" class="card-ext-link" aria-label="Ver proyecto">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <p class="card-desc" data-i18n="burgerli_desc">Plataforma de pedidos en tiempo real para restaurantes.</p>
+          <ul>
+            <li data-i18n="burgerli_1">Servidor WebSocket manejando pedidos concurrentes y actualizaciones en vivo para cocina</li>
+            <li data-i18n="burgerli_2">Backend en FastAPI con ciclo de vida de pedidos y control de acceso por roles</li>
+            <li data-i18n="burgerli_3">Deploy en VPS con Docker + Nginx</li>
+          </ul>
+        </div>
+        <div class="card-tags">
+          <span class="tag">WebSockets</span><span class="tag">FastAPI</span><span class="tag">MySQL</span><span class="tag">Docker</span>
+        </div>
+      </div>
+
+      <div class="card accent-card">
+        <div class="card-body">
+          <div class="card-title-row">
+            <span class="card-emoji">✈️</span>
+            <h3>Tranett</h3>
+            <a href="https://travelnett-saas.vercel.app/login" target="_blank" class="card-ext-link" aria-label="Ver proyecto">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <p class="card-desc" data-i18n="tranett_desc">SaaS para operadores de turismo — reservas, liquidaciones y gestión.</p>
+          <ul>
+            <li data-i18n="tranett_1">Backend multi-tenant gestionando reservas, pagos e informes por operador</li>
+            <li data-i18n="tranett_2">Lógica de liquidaciones entre proveedores y servicios</li>
+            <li data-i18n="tranett_3">API REST consumida por frontend web e integraciones externas</li>
+          </ul>
+        </div>
+        <div class="card-tags">
+          <span class="tag">FastAPI</span><span class="tag">MySQL</span><span class="tag">Docker</span><span class="tag">SaaS</span>
+        </div>
+      </div>
+
+      <div class="card accent-card">
+        <div class="card-body">
+          <div class="card-title-row">
+            <span class="card-emoji">🏥</span>
+            <h3>Vitalis</h3>
+            <a href="https://saludvitalis.org/" target="_blank" class="card-ext-link" aria-label="Ver proyecto">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <p class="card-desc" data-i18n="vitalis_desc">Sistema de gestión médica con manejo de documentos y control de acceso.</p>
+          <ul>
+            <li data-i18n="vitalis_1">Sistema RBAC con permisos granulares para pacientes, staff y administradores</li>
+            <li data-i18n="vitalis_2">Pipeline de carga, almacenamiento y recuperación de documentos médicos</li>
+            <li data-i18n="vitalis_3">Backend en FastAPI con separación de dominios estructurada</li>
+          </ul>
+        </div>
+        <div class="card-tags">
+          <span class="tag">FastAPI</span><span class="tag">MySQL</span><span class="tag">RBAC</span><span class="tag">Docker</span>
+        </div>
+      </div>
+
+
+      <div class="card accent-card">
+        <div class="card-body">
+          <div class="card-title-row">
+            <span class="card-emoji">✈️</span>
+            <h3>Serena Viajes</h3>
+            <a href="https://github.com/facudemarco/backend-serena" target="_blank" class="card-ext-link" aria-label="Ver proyecto">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <p class="card-desc" data-i18n="serena_desc">Backend para agencia de viajes — autenticación, gestión de datos y deploy en VPS.</p>
+          <ul>
+            <li data-i18n="serena_1">API REST con FastAPI: CRUD completo y login con usuario pre-cargado en base de datos</li>
+            <li data-i18n="serena_2">MySQL como base de datos con modelos Pydantic para validación de datos</li>
+            <li data-i18n="serena_3">Dockerizado y desplegado en servidor privado</li>
+          </ul>
+        </div>
+        <div class="card-tags">
+          <span class="tag">FastAPI</span><span class="tag">MySQL</span><span class="tag">Docker</span><span class="tag">VPS</span>
+        </div>
+      </div>
+
+      <div class="card accent-card">
+        <div class="card-body">
+          <div class="card-title-row">
+            <span class="card-emoji">🛒</span>
+            <h3>BarElectro</h3>
+            <a href="https://bargiuelectro.com/" target="_blank" class="card-ext-link" aria-label="Ver proyecto">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <p class="card-desc" data-i18n="barelectro_desc">Backend para e-commerce de productos electrónicos.</p>
+          <ul>
+            <li data-i18n="barelectro_1">API REST con FastAPI: catálogo de productos y formulario de contacto</li>
+            <li data-i18n="barelectro_2">Arquitectura modular con routers separados por dominio</li>
+            <li data-i18n="barelectro_3">Dockerizado con soporte multi-frontend vía CORS</li>
+          </ul>
+        </div>
+        <div class="card-tags">
+          <span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">REST API</span>
+        </div>
+      </div>
+
+      <div class="card accent-card">
+        <div class="card-body">
+          <div class="card-title-row">
+            <span class="card-emoji">🎫</span>
+            <h3>AlexisEVT</h3>
+            <a href="https://alexis.iwebtecnology.com/" target="_blank" class="card-ext-link" aria-label="Ver proyecto">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <p class="card-desc" data-i18n="alexisevt_desc">Plataforma de reservas multi-vendor con liquidaciones, notificaciones y gestión de paquetes.</p>
+          <ul>
+            <li data-i18n="alexisevt_1">9 módulos: auth, usuarios, paquetes, reservas, liquidaciones, notificaciones, cartelera, uploads y config</li>
+            <li data-i18n="alexisevt_2">Rate limiting, migraciones con Alembic y seed automático de base de datos al iniciar</li>
+            <li data-i18n="alexisevt_3">Full-stack: FastAPI + Next.js + Docker Compose, con tests de sistema</li>
+          </ul>
+        </div>
+        <div class="card-tags">
+          <span class="tag">FastAPI</span><span class="tag">Next.js</span><span class="tag">Alembic</span><span class="tag">Docker</span>
+        </div>
+      </div>
+
+      <div class="card accent-card">
+        <div class="card-body">
+          <div class="card-title-row">
+            <span class="card-emoji">🏡</span>
+            <h3>Zona Quintas</h3>
+            <a href="https://github.com/facudemarco/backend-zonaquintas" target="_blank" class="card-ext-link" aria-label="Ver proyecto">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <p class="card-desc" data-i18n="zonaquintas_desc">Plataforma de gestión de propiedades rurales con autenticación y billetera virtual.</p>
+          <ul>
+            <li data-i18n="zonaquintas_1">Sistema de autenticación y gestión de usuarios</li>
+            <li data-i18n="zonaquintas_2">Módulo de propiedades con imágenes servidas estáticamente</li>
+            <li data-i18n="zonaquintas_3">Wallet para transacciones financieras entre usuarios</li>
+          </ul>
+        </div>
+        <div class="card-tags">
+          <span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">Auth</span><span class="tag">REST API</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section" id="stack">
+    <div class="section-intro">
+      <h2 data-i18n="stack_title">Stack</h2>
+      <p data-i18n="stack_sub">Tecnologías con las que trabajo</p>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-item"><span class="stack-dot"></span><span data-i18n="s_backend">Backend</span><strong>Python · FastAPI</strong></div>
+      <div class="stack-item"><span class="stack-dot"></span><span data-i18n="s_db">Base de datos</span><strong>MySQL</strong></div>
+      <div class="stack-item"><span class="stack-dot"></span><span data-i18n="s_infra">Infraestructura</span><strong>Docker · Nginx · VPS</strong></div>
+      <div class="stack-item"><span class="stack-dot"></span><span data-i18n="s_rt">Tiempo real</span><strong>WebSockets</strong></div>
+      <div class="stack-item"><span class="stack-dot"></span><span data-i18n="s_auto">Automatización</span><strong>n8n · Webhooks · REST</strong></div>
+      <div class="stack-item"><span class="stack-dot"></span><span data-i18n="s_ai">IA / Integraciones</span><strong>OpenRouter · LLMs · Meta API</strong></div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section class="section" id="certs">
+    <div class="section-intro">
+      <h2 data-i18n="certs_title">Cursos</h2>
+      <p data-i18n="certs_sub">Formación complementaria</p>
+    </div>
+    <div class="certs-list">
+
+      <div class="cert-card">
+        <div class="cert-left"></div>
+        <div class="cert-body">
+          <div class="cert-header">
+            <div>
+              <h3 data-i18n="cert1_name">Iniciación al Desarrollo con IA</h3>
+              <p class="cert-issuer">BigSchool</p>
+            </div>
+            <a href="Certificates/Certificado-Facundo-Demarco-4k8ic02l.pdf" target="_blank" class="cert-link" data-i18n="cert_view">Ver certificado ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-left"></div>
+        <div class="cert-body">
+          <div class="cert-header">
+            <div>
+              <h3 data-i18n="cert2_name">Introducción a Data Science</h3>
+              <p class="cert-issuer">Santander Open Academy</p>
+            </div>
+            <a href="Certificates/data_science_introduction_santander.pdf" target="_blank" class="cert-link" data-i18n="cert_view">Ver certificado ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-left"></div>
+        <div class="cert-body">
+          <div class="cert-header">
+            <div>
+              <h3 data-i18n="cert3_name">Introducción a IA Generativa</h3>
+              <p class="cert-issuer">Santander Open Academy</p>
+            </div>
+            <a href="Certificates/generative_ai_introduction_santander.pdf" target="_blank" class="cert-link" data-i18n="cert_view">Ver certificado ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-left"></div>
+        <div class="cert-body">
+          <div class="cert-header">
+            <div>
+              <h3 data-i18n="cert5_name">Programming with JavaScript</h3>
+              <p class="cert-issuer">Meta · <span class="cert-date">nov. 2023</span></p>
+            </div>
+            <a href="Certificates/Programming with JavaScript.pdf" target="_blank" class="cert-link" data-i18n="cert_view">Ver certificado ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-left"></div>
+        <div class="cert-body">
+          <div class="cert-header">
+            <div>
+              <h3 data-i18n="cert6_name">JavaScript Algorithms and Data Structures</h3>
+              <p class="cert-issuer">freeCodeCamp · <span class="cert-date">sept. 2023</span></p>
+            </div>
+            <a href="Certificates/JavaScript Algorithms and Data Structures.png" target="_blank" class="cert-link" data-i18n="cert_view">Ver certificado ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-left"></div>
+        <div class="cert-body">
+          <div class="cert-header">
+            <div>
+              <h3 data-i18n="cert7_name">Introduction to Front-End Development</h3>
+              <p class="cert-issuer">Meta · <span class="cert-date">sept. 2023</span></p>
+            </div>
+            <a href="Certificates/Introduction to Front-End Development.pdf" target="_blank" class="cert-link" data-i18n="cert_view">Ver certificado ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-left"></div>
+        <div class="cert-body">
+          <div class="cert-header">
+            <div>
+              <h3 data-i18n="cert8_name">Responsive Web Design</h3>
+              <p class="cert-issuer">freeCodeCamp · <span class="cert-date">oct. 2022</span></p>
+            </div>
+            <a href="Certificates/Responsive Web Design Certificate.png" target="_blank" class="cert-link" data-i18n="cert_view">Ver certificado ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-intro">
+      <h2 data-i18n="contact_title">Contacto</h2>
+      <p data-i18n="contact_sub">¿Trabajamos juntos?</p>
+    </div>
+    <div class="contact-box">
+      <p class="contact-text" data-i18n="contact_text">
+        Disponible para roles como Backend o AI Engineer.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:facundo.demarco.dev@hotmail.com" class="btn-primary" data-i18n="contact_btn">Escribime</a>
+        <a href="https://www.linkedin.com/in/facundodemarco/" target="_blank" class="btn-outline">LinkedIn</a>
+        <a href="https://github.com/facudemarco" target="_blank" class="btn-outline">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p data-i18n="footer">Facundo Demarco · Argentina · 2025</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
