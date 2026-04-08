@@ -63,7 +63,7 @@ const translations = {
     contact_sub:    '¿Trabajamos juntos?',
     contact_text:   'Disponible para roles como Backend o AI Engineer.',
     contact_btn:    'Escribime',
-    footer:         'Facundo Demarco · Argentina · 2025',
+    footer:         'Facundo Demarco · Argentina · 2026',
   },
   en: {
     lang_label:     'ES',
@@ -128,7 +128,7 @@ const translations = {
     contact_sub:    'Want to work together?',
     contact_text:   'Available for roles as Backend or AI Engineer.',
     contact_btn:    'Get in touch',
-    footer:         'Facundo Demarco · Argentina · 2025',
+    footer:         'Facundo Demarco · Argentina · 2026',
   }
 };
 
